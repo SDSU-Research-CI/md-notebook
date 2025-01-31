@@ -12,6 +12,8 @@ RUN apt-get update -y \
     gcc \
     g++ \
     openmpi-bin \
+    lammps \
+    openkim-models \
     vim \
     dbus-x11 \
     xfce4 \
@@ -40,8 +42,9 @@ RUN wget https://ftp.gromacs.org/gromacs/gromacs-2024.3.tar.gz \
  && source /usr/local/gromacs/bin/GMXRC
 
 # Install AMS
-RUN wget https://downloads.scm.com/Downloads/download2024/bin/ams2024.102.pc64_linux.openmpi.bin.tgz
-RUN cd /opt && tar -xf ams2024.102.pc64_linux.openmpi.bin.tgz
+# RUN wget https://downloads.scm.com/Downloads/download2024/bin/ams2024.102.pc64_linux.openmpi.bin.tgz
+COPY ams2024.102.pc64_linux.openmpi.bin.tgz ams2024.102.pc64_linux.openmpi.bin.tgz
+RUN tar -xf ams2024.102.pc64_linux.openmpi.bin.tgz
 
 # Switch back to notebook user
 USER $NB_USER
