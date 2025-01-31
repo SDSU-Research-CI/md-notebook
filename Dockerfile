@@ -43,8 +43,8 @@ RUN wget https://ftp.gromacs.org/gromacs/gromacs-2024.3.tar.gz \
 
 # Install AMS
 # RUN wget https://downloads.scm.com/Downloads/download2024/bin/ams2024.102.pc64_linux.openmpi.bin.tgz
-COPY ams2024.102.pc64_linux.openmpi.bin.tgz ams2024.102.pc64_linux.openmpi.bin.tgz
-RUN tar -xf ams2024.102.pc64_linux.openmpi.bin.tgz
+# COPY ams2024.102.pc64_linux.openmpi.bin.tgz ams2024.102.pc64_linux.openmpi.bin.tgz
+# RUN tar -xf ams2024.102.pc64_linux.openmpi.bin.tgz
 
 # Switch back to notebook user
 USER $NB_USER
