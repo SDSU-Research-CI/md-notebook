@@ -7,8 +7,8 @@ Jupyter Notebook container image for running Molecular Dynamics codes
 - g++ 
 - openmpi-bin 
 - vim 
-- GROMACS
 - LAMMPS
-- Amsterdam Modeling Suite
+- ovito
+- Quantum Espresso
 
-This image is based upon the [Jupyter Stack Minimal image](https://github.com/jupyter/docker-stacks/tree/main/images/minimal-notebook)
+This image is based upon the [Jupyter Stack SciPy image](https://github.com/jupyter/docker-stacks/tree/main/images/scipy-notebook)
