@@ -66,6 +66,11 @@ RUN sed -i 's|TMP_DIR=\$PREFIX/tempdir|TMP_DIR=/tmp|' environment_variables \
 # Ensure jovyan/notebook user owns everything under the QE directory
 RUN chown -R 1000:100 /opt/qe-7.3.1
 
+# Copy lammps examples 
+RUN mkdir -p /opt/lammps/examples \
+ && cp -r /usr/share/lammps/examples /opt/lammps/examples \
+ && chown -R 1000:100 /opt/lammps
+
 # Switch back to notebook user
 USER $NB_USER
 WORKDIR /home/${NB_USER}
